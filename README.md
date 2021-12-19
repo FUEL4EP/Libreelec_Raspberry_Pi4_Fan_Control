@@ -5,7 +5,7 @@
  - quiet
  - metal case
  - external WiFi antenna
- - temperature controlled fan
+ - temperature controlled PWM of fan
  - simple, only few additional hardware components are required
  
 
@@ -31,7 +31,7 @@
 ![Schematics](schematics_of_fan_control.png)
     + solder as floating wiring, ensure that all components are isolated by insulation tape 
     - as reference, the GPIO pinout of a Raspberry Pi 4 is available e.g. [here](https://maker.pro/raspberry-pi/tutorial/raspberry-pi-4-gpio-pinout)
-    + used pins
+    + used Raspberry Pi 4 GPIO pins:
         * +5V power (#2)
         * GND ground (#6)
         * BCM24 (#18)
@@ -59,7 +59,7 @@
         > mount -o remount,ro /flash
         + and reboot for the changes in config.txt to be applied:
         > reboot
-- the fan control software is dervied from [here](https://www.internauta37.altervista.org/en/blog/install-melopero-fan-hat-raspberry-pi-4-libreelec). Many thanks to [internauta37](https://www.internauta37.altervista.org/en) !
+- the fan control software is derived from [here](https://www.internauta37.altervista.org/en/blog/install-melopero-fan-hat-raspberry-pi-4-libreelec). Many thanks to [internauta37](https://www.internauta37.altervista.org/en) !
     - installation procedure for the fan control (derived from [here](https://www.internauta37.altervista.org/en/blog/install-melopero-fan-hat-raspberry-pi-4-libreelec).)
     - to make the fan working on LibreELEC it is necessary to perform the following steps:
 
@@ -71,7 +71,7 @@
             > ssh root@<raspberry_pi4_ip_address>
 
             +    the default ssh password is: libreelec
-            + Check that all the libraries by Raspberry Pi Tools have been installed correctly:
+            + check that all the libraries by Raspberry Pi Tools have been installed correctly:
 
             >  ls -la /storage/.kodi/addons/virtual.rpi-tools/lib
 

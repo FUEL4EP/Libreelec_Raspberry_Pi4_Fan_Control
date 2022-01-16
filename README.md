@@ -81,7 +81,7 @@
             > 
             >  cd /storage/.config/fan_controller
             > 
-            >  wget https://github.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/blob/master/fan_controller.py
+            >  wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/master/fan_controller.py
 
             + create the autostart.sh file and let his start the python script that takes care of controlling the fan:
 

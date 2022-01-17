@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# (C) 2021 FUEL4EP        (Creative Commons)
+# (C) 2022 FUEL4EP        (Creative Commons)
 # license:                https://creativecommons.org/licenses/by-nc-sa/4.0/
 import sys
 sys.path.append('/storage/.kodi/addons/virtual.rpi-tools/lib')
@@ -11,8 +11,9 @@ import glob
 
 minimum_always_ON=True
 minimum_speed=30
+turn_on_speed=65
 target_temp=52
-sleepTime=10
+sleepTime=20
 debugFlag=False
 
 current_speed=0
@@ -54,8 +55,8 @@ def setDutyCycle(new_duty):
     if (current_speed != new_duty):
       if (new_duty < 50 ):
         if (new_duty > 0 ):
-          #set duty cycle to 100% for 1 second after a change of the duty cycle in order to ensure the start of the fan
-          myPWM.ChangeDutyCycle(100)
+          #set duty cycle to turn_on_speed % for 1 second after a change of the duty cycle in order to ensure the start of the fan
+          myPWM.ChangeDutyCycle(turn_on_speed)
           time.sleep(1)
     myPWM.ChangeDutyCycle(new_duty)
     current_speed=new_duty

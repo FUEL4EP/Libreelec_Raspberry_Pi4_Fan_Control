@@ -61,7 +61,7 @@
         > reboot
 - the fan control software is derived from [here](https://www.internauta37.altervista.org/en/blog/install-melopero-fan-hat-raspberry-pi-4-libreelec). Many thanks to [internauta37](https://www.internauta37.altervista.org/en) !
     - installation procedure for the fan control (derived from [here](https://www.internauta37.altervista.org/en/blog/install-melopero-fan-hat-raspberry-pi-4-libreelec).)
-    - major change is that the fan is turning at full speed for 1 second after each change of the fan speed
+    - major change is that the fan is turning at 'turn_on_speed (default: 65%)' speed for 1 second after each change of the fan speed
     - to make the fan working on LibreELEC it is necessary to perform the following steps:
 
         + install the Addon Raspberry Pi Tools in LibreELEC

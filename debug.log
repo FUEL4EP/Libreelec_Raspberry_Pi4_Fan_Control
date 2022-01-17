@@ -1,0 +1,38 @@
+example of a debug log during the streaming of a Youtube video
+
+LibreELEC:~ # python3 /storage/.config/fan_controller/fan_controller.py
+initial PWM duty cycle =  100
+temperature =  41.3
+new PWM duty cycle =  30
+temperature =  40.9
+new PWM duty cycle =  30
+temperature =  42.3
+new PWM duty cycle =  30
+temperature =  44.3
+new PWM duty cycle =  30
+temperature =  44.8
+new PWM duty cycle =  30
+temperature =  45.2
+new PWM duty cycle =  30
+temperature =  46.7
+new PWM duty cycle =  30
+temperature =  47.2
+new PWM duty cycle =  30
+temperature =  46.2
+new PWM duty cycle =  30
+temperature =  46.7
+new PWM duty cycle =  30
+temperature =  45.7
+new PWM duty cycle =  30
+temperature =  47.2
+new PWM duty cycle =  30
+temperature =  48.2
+new PWM duty cycle =  30
+temperature =  46.7
+new PWM duty cycle =  30
+temperature =  47.2
+new PWM duty cycle =  30
+temperature =  48.2
+new PWM duty cycle =  30
+temperature =  48.2
+new PWM duty cycle =  30

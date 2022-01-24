@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one](https://test.libreelec.tv/LibreELEC-RPi4.arm-11.0-nightly-20211212-7ed4d18.img.gz) (worked for me)
+- Libreelec Rpi4 nightly build e.g. [this one](https://test.libreelec.tv/LibreELEC-RPi4.arm-11.0-nightly-20220124-cef9573.img.gz) (worked for me, please check for the latest available nightly builds at https://test.libreelec.tv)
 - add two lines for the Hifiberry Amp2 to the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -114,6 +114,7 @@
 - use of these instructions is on your own risk! No liability by the publisher!
 - ensure that the fan is turning after installation
 - ensure that your raspberry pi4 is not overheating due to a wrong installation
+- it is strongly recommended to make a backup of your SD card before you [upgrade the Libreelec nightly build](https://ekalinak.eu/2017/04/11/updating-kodi-on-raspberry-pi-via-ssh/) 
 
 ## license
 

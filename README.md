@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one](https://test.libreelec.tv/LibreELEC-RPi4.arm-11.0-nightly-20220124-cef9573.img.gz) (worked for me, please check for the latest available nightly builds at https://test.libreelec.tv)
+- Libreelec Rpi4 nightly build e.g. [this one](LibreELEC-RPi4.arm-11.0-nightly-20220224-ae5c471.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - add two lines for the Hifiberry Amp2 to the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec

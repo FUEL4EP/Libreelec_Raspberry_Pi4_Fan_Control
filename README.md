@@ -53,7 +53,7 @@
         + now execute the following commands at the command line
         > cd /flash
         >   
-        > wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/config.txt
+        > wget https://github.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/blob/master/config.txt
         + then set the /flash partition back to read-only mode:
         > mount -o remount,ro /flash
         + and reboot for the changes in config.txt to be applied:

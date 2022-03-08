@@ -42,20 +42,19 @@
 ## software
 
 - Libreelec Rpi4 nightly build e.g. [this one](LibreELEC-RPi4.arm-11.0-nightly-20220224-ae5c471.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
-- add two lines for the Hifiberry Amp2 to the Rapberry Pi 4's config.txt:
+- replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
         > ssh root@<raspberry_pi4_ip_address>
-        + the default ssh password is: libreelec (if not changed yet)
+        + the default ssh password is: libreelec (if not changed yet, it is strongly recommended to change the default password!)
         + the /flash boot partition is read-only by default, so we need to remount it in read-write mode:
 
         > mount -o remount,rw /flash
-        + use the nano text editor to modify the file. Save changes with ctrl+o and exit using ctrl+x:
-        > nano /flash/config.txt
-        + add the following lines for the Hifiberry Amp2 at the end:
-        > max_usb_current=1  
-        > dtoverlay=hifiberry-dacplus
-        + after editing set the /flash partition back to read-only mode:
+        + now execute the following commands at the command line
+        > cd /flash
+        >   
+        > wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/config.txt
+        + then set the /flash partition back to read-only mode:
         > mount -o remount,ro /flash
         + and reboot for the changes in config.txt to be applied:
         > reboot

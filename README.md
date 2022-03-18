@@ -103,6 +103,10 @@
             - experts can observe debug messages by invoking from the command line after setting 'debugFlag=True' in the python script 'fan_controller.py':
             > python3 /storage/.config/fan_controller/fan_controller.py
             - please do not forget to set 'debugFlag=False' afterwards
+- I got some Mediathek addons working properly by installing the following VideoPlayer InputStream LibreELEC Addons:
+    + InputStream Adaptive
+    + Inputstream FFmpeg Direct
+    + RTMP Input
 
 ## final step
 

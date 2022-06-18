@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one](https://test.libreelec.tv/11.0/RPi/LibreELEC-RPi4.arm-11.0-nightly-20220608-9d4c846.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/LibreELEC-RPi4.arm-11.0-nightly-20220618-b78941a.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -108,7 +108,7 @@
     + Inputstream FFmpeg Direct
     + RTMP Input
 - without these 3 addons the seeking forward and backward is not working!
-- **CURRENTLY NOT WORKING**: for **manual** updates inside Libreelec please define in **Settings => LibreElec => Updates**:
+- **CURRENTLY NOT WORKING DUE TO NOT MAINTAINED releases.json FILE**: for **manual** updates inside Libreelec please define in **Settings => LibreElec => Updates**:
     + automatic updates: **manual**
     + user defined channel 1: **https://test.libreelec.tv/releases.json** (currently not properly defined!!)
     + Update-Channel: **LibreELEC-11.0**

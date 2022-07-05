@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/LibreELEC-RPi4.arm-11.0-nightly-20220618-b78941a.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/LibreELEC-RPi4.arm-11.0-nightly-20220704-0a796fe.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -113,6 +113,12 @@
     + user defined channel 1: **https://test.libreelec.tv/releases.json** (currently not properly defined!!)
     + Update-Channel: **LibreELEC-11.0**
 - then select the latest update in **'available updates'**
+- alternative manual update via ssh is as follows:
+    + login into Libreelec by ssh
+    + cd /storage/.update
+    + wget -c <URL of latest LibreELEC-RPi4.arm-11.0-nightly-*.img.gz> in https://test.libreelec.tv/11.0/RPi
+    + e.g wget -v https://test.libreelec.tv/11.0/RPi/LibreELEC-RPi4.arm-11.0-nightly-20220704-0a796fe.img.gz
+    + reboot
 
 ## final step
 

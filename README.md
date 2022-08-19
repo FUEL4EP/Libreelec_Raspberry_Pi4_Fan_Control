@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20220718-3a651c4.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20220818-354884a.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -129,7 +129,12 @@
 - use of these instructions is on your own risk! No liability by the publisher!
 - ensure that the fan is turning after installation
 - ensure that your raspberry pi4 is not overheating due to a wrong installation
-- it is strongly recommended to make a backup of your SD card before you [upgrade the Libreelec nightly build](https://ekalinak.eu/2017/04/11/updating-kodi-on-raspberry-pi-via-ssh/) 
+- it is strongly recommended to make a backup of your SD card before you [upgrade the Libreelec nightly build](https://ekalinak.eu/2017/04/11/updating-kodi-on-raspberry-pi-via-ssh/)
+
+## donation
+
+- if you like my contribution, please feel free to spend me a coffee:  
+- <a href='https://ko-fi.com/FUEL4EP' target='_blank'><img height='20' style='border:0px;height:20px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## license
 

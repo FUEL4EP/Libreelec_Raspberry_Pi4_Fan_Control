@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20220907-833521b.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20220916-0ad8826.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -95,7 +95,9 @@
 
             >   (python3 /storage/.config/fan_controller/fan_controller.py)&
             > 
-            + save it; now all that remains is to restart the Raspberry and enjoy the fan running:
+            + save it
+            + if you want to have the audio muted after the boot of LibreElec, then use the provided [autostart.sh](./autostart.sh) instead
+            + now all that remains is to restart the Raspberry and enjoy the fan running:
             >
             > reboot
             > 

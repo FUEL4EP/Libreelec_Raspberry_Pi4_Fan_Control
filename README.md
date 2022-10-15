@@ -20,8 +20,8 @@
 - very quiet 25mm fan with ball bearing EBM Papst 255M axial flow fan 5 V/DC 2.3 m³/h (L x B x H) 25 x 25 x 8 mm e.g. from [Conrad](https://www.conrad.de/de/p/ebm-papst-255m-axialluefter-5-v-dc-2-3-m-h-l-x-b-x-h-25-x-25-x-8-mm-1926271.html)
 - heat sink 40 mm x 30 mm for Raspberry Pi 4 e.g. from [Reichelt](https://www.reichelt.de/raspberry-pi-4-kuehlkoerper-40-x-30-x-5-mm-schwarz-rpi-cool-40x30-p261928.html)
 - spacers, screws as appropriate
-- loudspeaker and speaker cables
-- TV or monitor 
+- loudspeaker and speaker cables, e.g. Polk S10E
+- TV or monitor, e.g. Philips Monitor BDM3270QP/00
 - for the fan control
     - 2N 7000 FAI MOSFET, N-CH, 60V, 0,115A, 0,4W, TO-92 e.g. from [Reichelt](https://www.reichelt.de/mosfet-n-ch-60v-0-115a-0-4w-to-92-2n-7000-fai-p219076.html)
     - resistor 10kOhm e.g. from [Reichelt](https://www.reichelt.de/duennschichtwiderstand-axial-0-4-w-10-kohm-1--vi-mba02040c1002-p233622.html)
@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20220916-0ad8826.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20221013-6285fc1.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec

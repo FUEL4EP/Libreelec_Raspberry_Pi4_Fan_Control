@@ -133,6 +133,10 @@
 - ensure that your raspberry pi4 is not overheating due to a wrong installation
 - it is strongly recommended to make a backup of your SD card before you [upgrade the Libreelec nightly build](https://ekalinak.eu/2017/04/11/updating-kodi-on-raspberry-pi-via-ssh/)
 
+## download
+
+- you can download the files of this repository from [here](https://github.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/archive/refs/heads/master.zip) as a zip file.
+
 ## donation
 
 - if you like my contribution, please feel free to spend me a coffee:  

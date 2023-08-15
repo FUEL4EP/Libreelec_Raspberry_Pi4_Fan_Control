@@ -41,7 +41,7 @@
 
 ## software
 
-- Libreelec 11 Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20230715-9a33cd2.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
+- Libreelec 11 Rpi4 nightly build e.g. [this one (may not exist anymore)](https://test.libreelec.tv/11.0/RPi/RPi4/LibreELEC-RPi4.arm-11.0-nightly-20230809-ecf5de7.img.gz) (worked for me, please check for the latest available RPi4 nightly builds at https://test.libreelec.tv/11.0/RPi/RPi4/: LibreELEC-RPi4.arm-11.0-nightly-*.img.gz)
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
@@ -136,6 +136,10 @@
 ## download
 
 - you can download the files of this repository from [here](https://github.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/archive/refs/heads/master.zip) as a zip file.
+
+## hints for Smart Home integration
+
+- for a Smart Home with [RaspberryMatic](https://raspberrymatic.de/de/start/) a DIY power switch for demand switch power supply has been developped: [HB-UNI-SenAct-4-4-RC_DS](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/sketches/HB-UNI-SenAct-4-4-RC_DS). A fitting PCB is described here [HB-UNI-SenAct-4-4-SC_DS_FUEL4EP](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/PCBs/HB-UNI-SenAct-4-4-SC_DS_FUEL4EP).
 
 ## donation
 

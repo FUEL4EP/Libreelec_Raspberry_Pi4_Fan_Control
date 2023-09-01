@@ -58,7 +58,7 @@
         > mount -o remount,ro /flash
         + and reboot for the changes in config.txt to be applied:
         > reboot
-- install / update the following addons to the latest version if streamings are suddenly stopping
+- install / update the following addons to the latest version if streamings are suddenly stopping, this may happen after an update of LibreElec image
 	+ InputStream Adaptive
     + Inputstream FFmpeg Direct
     + RTMP Input

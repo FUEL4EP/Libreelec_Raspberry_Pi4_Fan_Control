@@ -1,13 +1,13 @@
  # Libreelec fan control for a Raspberry Pi 4 + HifiBerry Amp2 shield [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFUEL4EP%2FLibreelec_Raspberry_Pi4_Fan_Control&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
- 
- 
+
+
  - ideal for video streaming
  - quiet
  - metal case
  - external WiFi antenna
  - temperature controlled PWM of fan
  - simple, only few additional hardware components are required
- 
+
 
 ## hardware
 
@@ -28,7 +28,7 @@
     - resistor 100Ohm e.g. from [Reichelt](https://www.reichelt.de/duennschichtwiderstand-axial-0-6-w-100-ohm-1--vi-mbb02070c1000-p233663.html)
     - diode 1N4148 e.g. from [Reichelt](https://www.reichelt.de/schalt-diode-100-v-150-ma-do-35-1n-4148-p1730.html)
     - schematics of fan control:
-![Schematics](schematics_of_fan_control.png)
+    ![Schematics](schematics_of_fan_control.png)
     + solder as floating wiring, ensure that all components are isolated by insulation tape 
     - as reference, the GPIO pinout of a Raspberry Pi 4 is available e.g. [here](https://maker.pro/raspberry-pi/tutorial/raspberry-pi-4-gpio-pinout)
     + used Raspberry Pi 4 GPIO pins:
@@ -45,7 +45,7 @@
 - replace the Rapberry Pi 4's config.txt:
     + connect to the Raspberry Pi 4 via ssh:
         + enable ssh access in Libreelec
-        > ssh root@<raspberry_pi4_ip_address>
+        > ssh root@\<raspberry_pi4_ip_address>
         + the default ssh password is: libreelec (if not changed yet, it is strongly recommended to change the default password!)
         + the /flash boot partition is read-only by default, so we need to remount it in read-write mode:
 
@@ -72,7 +72,7 @@
         + connect to the Raspberry Pi 4 via ssh:
             + enable ssh access in Libreelec
 
-            > ssh root@<raspberry_pi4_ip_address>
+            > ssh root@\<raspberry_pi4_ip_address>
 
             +    the default ssh password is: libreelec
             + check that all the libraries by Raspberry Pi Tools have been installed correctly:
@@ -129,6 +129,71 @@
 ## final step
 
 - seal the SD card opening of the case with black adhesive tape in order to avoid a bypass of the air flow. Keep the fan opening free.
+
+## migration to LibreELEC 12 (Kodi 21)
+
+- I've successfully migrated my LibreELEC 11 system to LibreELEC 12
+
+- if you want to migrate your LibreELEC 11 system to LibreELEC 12, please follow these steps:
+	+ create a backup of your LibreELEC 11 system
+		* Settings => LibreELEC => Backup
+	+ store the backup data on an USB stick
+	+ keep your LibreELEC 11 SD card, don't overwrite it, and keep it if your LibreELEC 12 migration should fail!
+	
+- flash the latest official LibreELEC 12 nightly build from [here](https://test.libreelec.tv/12.0/RPi/RPi4/) to a **NEW** SD card having at least the same size as your LibreELEC 11 SD card
+
+- insert the new SD card into the SD card slot of your Raspberry Pi 4
+
+- boot the system
+
+- restore the LibreELEC 11 backup created as above
+
+- replace the Rapberry Pi 4's config.txt:
+    + connect to the Raspberry Pi 4 via ssh:
+        + enable ssh access in Libreelec
+        > ssh root@\<raspberry_pi4_ip_address>
+        + the default ssh password is: libreelec (if not changed yet, it is strongly recommended to change the default password!)
+        + the /flash boot partition is read-only by default, so we need to remount it in read-write mode:
+
+        > mount -o remount,rw /flash
+        + now execute the following commands at the command line
+        > cd /flash
+        >   
+        > wget https://github.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/blob/master/config.txt
+        + then set the /flash partition back to read-only mode:
+        > mount -o remount,ro /flash
+        + and reboot for the changes in config.txt to be applied:
+        > reboot
+    
+- if everything ran smoothly, continue as follows:
+
+- replace the LE 11 Python script for the fan controller, since LE 12 requires some modifications:
+
+- connect to the Raspberry Pi 4 via ssh:
+
+> ssh root@\<raspberry_pi4_ip_address>
+
++    the default ssh password is: libreelec
+
++ download the LE 12 python script that starts and manages the fan:
+
+>  cd /storage/.config/fan_controller
+>
+>  wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/master/fan_controller_LE12.py fan_controller.py
+
++ now  restart the Raspberry and enjoy the fan running:
+
+>reboot
+
+- ensure that the fan is turning after the reboot
+- experts can observe debug messages by invoking from the command line after setting 'debugFlag=True' in the python script 'fan_controller.py':
+
+> python3 /storage/.config/fan_controller/fan_controller.py
+
+- please do not forget to set 'debugFlag=False' afterwards
+- update the LibreELEC addons (usually not needed)
+- enjoy
+- install the latest official LibreELEC 12 nightly builds from [here](https://test.libreelec.tv/12.0/RPi/RPi4/) as available, follow the LE 11 instructions above
 
 ## disclaimer
 

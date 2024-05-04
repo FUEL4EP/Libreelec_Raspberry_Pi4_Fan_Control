@@ -195,6 +195,11 @@
 - enjoy
 - install the latest official LibreELEC 12 nightly builds from [here](https://test.libreelec.tv/12.0/RPi/RPi4/) as available, follow the LE 11 instructions above
 
+## migration to LibreELEC 13
+
+- after having successfully migrated to LE 12, you can also update to LibreElec 13 as usual
+- the LE 13 daily updates are [here](https://test.libreelec.tv/13.0/RPi/RPi4/)
+
 ## disclaimer
 
 - use of these instructions is on your own risk! No liability by the publisher!

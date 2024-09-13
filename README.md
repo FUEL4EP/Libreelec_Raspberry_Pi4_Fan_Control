@@ -214,6 +214,7 @@
 ## hints for Smart Home integration
 
 - for a Smart Home with [RaspberryMatic](https://raspberrymatic.de/de/start/) a DIY power switch for demand switch power supply has been developped: [HB-UNI-SenAct-4-4-RC_DS](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/sketches/HB-UNI-SenAct-4-4-RC_DS). A fitting PCB is described here [HB-UNI-SenAct-4-4-SC_DS_FUEL4EP](https://github.com/FUEL4EP/HomeAutomation/tree/master/AsksinPP_developments/PCBs/HB-UNI-SenAct-4-4-SC_DS_FUEL4EP).
+- the power-up and shutdown of the Raspberry PI and the monitor can then e.g. be controller by Shortcuts on a Apple iPAD, see screendumps [here](./control_by_iPAD_shortcuts)
 
 ## donation
 

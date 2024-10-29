@@ -5,6 +5,7 @@ import sys
 sys.path.append('/storage/.kodi/addons/virtual.rpi-tools/lib')
 
 import os
+os.environ['LG_WD'] = '/tmp'        #see https://forum.libreelec.tv/thread/29050-rpi4-le12-0-1-autostart-sh-with-python-script-for-fan-control-won-t-work/
 import time
 import RPi.GPIO as GPIO
 import glob

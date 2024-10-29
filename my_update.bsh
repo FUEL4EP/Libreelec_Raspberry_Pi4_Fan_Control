@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#https://stackoverflow.com/questions/58684175/download-latest-file-from-remote-server-using-curl
+echo " "
+echo "LibreELEC update script started .."
+echo " "
+P=https://test.libreelec.tv/13.0/RPi/RPi4
+LIST=/storage/.update/listing.txt
+
+#check installed version
+INSTALLED_VERSION=$( sed -ne '/VERSION=/{s@.*VERSION="\(.*\)\"@\1@p}' < /etc/os-release )
+INSTALLED_TAR_GZ_FILE="LibreELEC-RPi4.aarch64-13.0-${INSTALLED_VERSION}.img.gz"
+[ -e ${LIST} ] && /usr/bin/rm ${LIST} 
+/usr/bin/curl -k "$P/" > ${LIST}
+#<a href="LibreELEC-RPi4.aarch64-13.0-nightly-20240507-e19b1ff.img.gz">LibreELEC-RPi4.aarch64-13.0-nightly-20240507-e19b1ff.img.gz</a><a href="LibreELEC-RPi4.aarch64-13.0-nightly-20240507-e19b1ff.img.gz.sha256">
+LATEST=$( sed -ne '/href=/{s@.*href="\(LibreELEC-RPi4.aarch64-13.0-nightly-[0-9]\+-[a-z0-9]\+\.img.gz\)\">LibreELEC-RPi4.aarch64-13.0-nightly-.*@\1@p}' < ${LIST} | sort -nr | head -1)
+echo " "
+echo "$P/$LATEST"
+echo " "
+echo "installed version is $INSTALLED_TAR_GZ_FILE"
+echo "latest available version is $LATEST"
+echo " "
+if [ $LATEST != $INSTALLED_TAR_GZ_FILE ] ; then
+echo " "
+echo "downloading latest version now .."´
+echo " "
+/usr/bin/curl -O "$P/$LATEST" --output-dir /storage/.update
+else
+echo " "
+echo "latest version is already installed"
+echo " "
+fi
+pwd
+/usr/bin/ls -largt /storage/.update
+[ -e ${LIST} ] && /usr/bin/rm ${LIST}
+echo "finished"

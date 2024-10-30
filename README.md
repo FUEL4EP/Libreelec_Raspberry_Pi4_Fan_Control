@@ -199,7 +199,60 @@
 
 - after having successfully migrated to LE 12, you can also update to LibreElec 13 as usual
 - the LE 13 daily updates are [here](https://test.libreelec.tv/13.0/RPi/RPi4/)
-- for LE13, please use [fan_controller_LE13.py](./fan_controller_LE13.py) instead of fan_controller.py
+- for LE13, please use [fan_controller_LE13.py](./fan_controller_LE13.py) instead of fan_controller.py:
+- download the LE 13 Python script for the fan controller, since LE 13 requires some modifications:
+
+- connect to the Raspberry Pi 4 via ssh:
+
+> ssh root@\<raspberry_pi4_ip_address>
+
++    the default ssh password is: libreelec
+
++ download the LE 13 python script that starts and manages the fan:
+
+>  cd /storage/.config/fan_controller
+>
+>  wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/master/fan_controller_LE13.py fan_controller_LE13.py
+
++ download the LE13 daily update script [my_update.bsh](./my_update.bsh):
+
+>  cd /storage/.config
+>
+>  wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/master/my_update.bsh my_update.bsh
+>
+> chmod +x my_update.bsh
+
++ download the LE13 autostart.sh script [autostart_LE13.sh](./autostart_LE13.sh):
+
+>  cd /storage/.config
+>
+>  wget https://raw.githubusercontent.com/FUEL4EP/Libreelec_Raspberry_Pi4_Fan_Control/master/autostart_LE13.sh autostart.sh
+>
+> chmod +x autostart.sh
+
++ now  restart the Raspberry and enjoy the fan running:
+
+>reboot
+
++ check that the installed software is running properly by
+
+- connect to the Raspberry Pi 4 via ssh:
+
+> ssh root@\<raspberry_pi4_ip_address>
+
+- enter the command
+
+> journalctl -u kodi-autostart
+
+ - to see the boot messages. No error should be reported.
+ 
+- check that the python fan controller script is running by the command
+
+> ps auxw | grep python
+
+- the output should list the running python script like
+> 1441 root      0:02 python3 /storage/.config/fan_controller/fan_controller_LE13.py
+
 
 ## disclaimer
 

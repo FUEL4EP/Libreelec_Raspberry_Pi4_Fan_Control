@@ -199,6 +199,7 @@
 
 - after having successfully migrated to LE 12, you can also update to LibreElec 13 as usual
 - the LE 13 daily updates are [here](https://test.libreelec.tv/13.0/RPi/RPi4/)
+- for LE13, please use [fan_controller_LE13.py](./fan_controller_LE13.py) instead of fan_controller.py
 
 ## disclaimer
 
